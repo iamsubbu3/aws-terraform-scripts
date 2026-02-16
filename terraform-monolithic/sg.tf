@@ -18,12 +18,14 @@ resource "aws_security_group" "sg" {
 
   # --- Administrative Access ---
   
+   # SSH from your laptop
   ingress {
-    description = "SSH access for specific admin IP"
+    description = "SSH from Admin IP"
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = [var.my_ip] 
+    # cidr_blocks = [var.my_ip]
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   ingress {

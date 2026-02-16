@@ -48,3 +48,26 @@ resource "aws_instance" "public_instance-2" {
     Name = var.public_instance_name_2
   }
 }
+
+################################################################################
+# 3. PUBLIC INSTANCE 3
+# Located in Public Subnet 3
+################################################################################
+
+resource "aws_instance" "public_instance-3" {
+  ami                         = var.public_instance_ami_3
+  instance_type               = var.public_instance_type_3
+  vpc_security_group_ids      = [aws_security_group.sg.id]
+  subnet_id                   = aws_subnet.public-subnet-3.id
+  key_name                    = var.public_instance_key_pair_3
+  associate_public_ip_address = var.public_instance_associate_ip_add_3
+
+  root_block_device {
+    volume_size = var.public_instance_volume_size_3
+    volume_type = var.public_instance_volume_type_3 
+  }
+
+  tags = {
+    Name = var.public_instance_name_3
+  }
+}

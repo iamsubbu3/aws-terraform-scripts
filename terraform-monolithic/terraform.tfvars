@@ -52,7 +52,7 @@ private_rt_name      = "terraform-private-rt"
 # 3. SECURITY GROUPS
 ################################################################################
 sg_name         = "terraform-sg"
-my_ip           = "49.206.131.83/32"
+my_ip           = "49.206.132.27/32"
 eks_jump_server = "0.0.0.0/0"
 
 ################################################################################
@@ -65,16 +65,25 @@ public_instance_key_pair_1         = "iamsubbu-keypair"
 public_instance_associate_ip_add_1 = true
 public_instance_volume_size_1      = 50
 public_instance_volume_type_1      = "gp3"
-public_instance_name_1             = "terraform-public-instance-1"
+public_instance_name_1             = "Ansible-server"
 
 # Instance 2
 public_instance_ami_2              = "ami-0ecb62995f68bb549"
-public_instance_type_2             = "t3.medium"
+public_instance_type_2             = "t3.large"
 public_instance_key_pair_2         = "iamsubbu-keypair"
 public_instance_associate_ip_add_2 = true
 public_instance_volume_size_2      = 50
 public_instance_volume_type_2      = "gp3"
-public_instance_name_2             = "terraform-public-instance-2"
+public_instance_name_2             = "Jenkins-server"
+
+# Instance 3
+public_instance_ami_3              = "ami-0ecb62995f68bb549"
+public_instance_type_3             = "t3.large"
+public_instance_key_pair_3         = "iamsubbu-keypair"
+public_instance_associate_ip_add_3 = true
+public_instance_volume_size_3      = 50
+public_instance_volume_type_3      = "gp3"
+public_instance_name_3             = "K8s-server"
 
 ################################################################################
 # 5. EKS CLUSTER SETTINGS

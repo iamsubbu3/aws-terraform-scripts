@@ -226,6 +226,35 @@ variable "public_instance_name_2" {
   type = string
 }
 
+# --- Public Instance 3 ---
+variable "public_instance_ami_3" {
+  type = string
+}
+
+variable "public_instance_type_3" {
+  type = string
+}
+
+variable "public_instance_key_pair_3" {
+  type = string
+}
+
+variable "public_instance_associate_ip_add_3" {
+  type = bool
+}
+
+variable "public_instance_volume_size_3" {
+  type = number
+}
+
+variable "public_instance_volume_type_3" {
+  type = string
+}
+
+variable "public_instance_name_3" {
+  type = string
+}
+
 ################################################################################
 # 6. EKS CLUSTER SETTINGS
 ################################################################################
